@@ -9,21 +9,56 @@
 /* Begin PBXBuildFile section */
 		97A0563426410BEF006BEE11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A0563326410BEF006BEE11 /* AppDelegate.swift */; };
 		97A0563626410BEF006BEE11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A0563526410BEF006BEE11 /* SceneDelegate.swift */; };
-		97A0563826410BEF006BEE11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A0563726410BEF006BEE11 /* ViewController.swift */; };
+		97A0563826410BEF006BEE11 /* _ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A0563726410BEF006BEE11 /* _ViewController.swift */; };
 		97A0563B26410BEF006BEE11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97A0563926410BEF006BEE11 /* Main.storyboard */; };
 		97A0563D26410BF0006BEE11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A0563C26410BF0006BEE11 /* Assets.xcassets */; };
 		97A0564026410BF0006BEE11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97A0563E26410BF0006BEE11 /* LaunchScreen.storyboard */; };
+		97A0564926410EBA006BEE11 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A0564826410EBA006BEE11 /* BankAccount.swift */; };
+		97A056512641D205006BEE11 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A056502641D205006BEE11 /* Intents.framework */; };
+		97A056542641D205006BEE11 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A056532641D205006BEE11 /* IntentHandler.swift */; };
+		97A056582641D205006BEE11 /* Siri Payment Intents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 97A0564E2641D205006BEE11 /* Siri Payment Intents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		97DBBB07264272300070A7FE /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A056532641D205006BEE11 /* IntentHandler.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97A056562641D205006BEE11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97A0562826410BEF006BEE11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97A0564D2641D205006BEE11;
+			remoteInfo = "Siri Payment Intents";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		97A0565C2641D205006BEE11 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				97A056582641D205006BEE11 /* Siri Payment Intents.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		97A0563026410BEF006BEE11 /* SiriKit_Payment_Integration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriKit_Payment_Integration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A0563326410BEF006BEE11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97A0563526410BEF006BEE11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		97A0563726410BEF006BEE11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		97A0563726410BEF006BEE11 /* _ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _ViewController.swift; sourceTree = "<group>"; };
 		97A0563A26410BEF006BEE11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97A0563C26410BF0006BEE11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97A0563F26410BF0006BEE11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97A0564126410BF0006BEE11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97A0564726410E77006BEE11 /* SiriKit_Payment_IntegrationDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriKit_Payment_IntegrationDebug.entitlements; sourceTree = "<group>"; };
+		97A0564826410EBA006BEE11 /* BankAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccount.swift; sourceTree = "<group>"; };
+		97A0564E2641D205006BEE11 /* Siri Payment Intents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Siri Payment Intents.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A056502641D205006BEE11 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		97A056532641D205006BEE11 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		97A056552641D205006BEE11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +69,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		97A0564B2641D205006BEE11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97A056512641D205006BEE11 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				97A0563226410BEF006BEE11 /* SiriKit_Payment_Integration */,
+				97A056522641D205006BEE11 /* Siri Payment Intents */,
+				97A0564F2641D205006BEE11 /* Frameworks */,
 				97A0563126410BEF006BEE11 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				97A0563026410BEF006BEE11 /* SiriKit_Payment_Integration.app */,
+				97A0564E2641D205006BEE11 /* Siri Payment Intents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +102,34 @@
 		97A0563226410BEF006BEE11 /* SiriKit_Payment_Integration */ = {
 			isa = PBXGroup;
 			children = (
+				97A0564726410E77006BEE11 /* SiriKit_Payment_IntegrationDebug.entitlements */,
 				97A0563326410BEF006BEE11 /* AppDelegate.swift */,
 				97A0563526410BEF006BEE11 /* SceneDelegate.swift */,
-				97A0563726410BEF006BEE11 /* ViewController.swift */,
+				97A0563726410BEF006BEE11 /* _ViewController.swift */,
 				97A0563926410BEF006BEE11 /* Main.storyboard */,
 				97A0563C26410BF0006BEE11 /* Assets.xcassets */,
 				97A0563E26410BF0006BEE11 /* LaunchScreen.storyboard */,
 				97A0564126410BF0006BEE11 /* Info.plist */,
+				97A0564826410EBA006BEE11 /* BankAccount.swift */,
 			);
 			path = SiriKit_Payment_Integration;
+			sourceTree = "<group>";
+		};
+		97A0564F2641D205006BEE11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97A056502641D205006BEE11 /* Intents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97A056522641D205006BEE11 /* Siri Payment Intents */ = {
+			isa = PBXGroup;
+			children = (
+				97A056532641D205006BEE11 /* IntentHandler.swift */,
+				97A056552641D205006BEE11 /* Info.plist */,
+			);
+			path = "Siri Payment Intents";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +142,34 @@
 				97A0562C26410BEF006BEE11 /* Sources */,
 				97A0562D26410BEF006BEE11 /* Frameworks */,
 				97A0562E26410BEF006BEE11 /* Resources */,
+				97A0565C2641D205006BEE11 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				97A056572641D205006BEE11 /* PBXTargetDependency */,
 			);
 			name = SiriKit_Payment_Integration;
 			productName = SiriKit_Payment_Integration;
 			productReference = 97A0563026410BEF006BEE11 /* SiriKit_Payment_Integration.app */;
 			productType = "com.apple.product-type.application";
+		};
+		97A0564D2641D205006BEE11 /* Siri Payment Intents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97A056592641D205006BEE11 /* Build configuration list for PBXNativeTarget "Siri Payment Intents" */;
+			buildPhases = (
+				97A0564A2641D205006BEE11 /* Sources */,
+				97A0564B2641D205006BEE11 /* Frameworks */,
+				97A0564C2641D205006BEE11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Siri Payment Intents";
+			productName = "Siri Payment Intents";
+			productReference = 97A0564E2641D205006BEE11 /* Siri Payment Intents.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,6 +181,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					97A0562F26410BEF006BEE11 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					97A0564D2641D205006BEE11 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -115,6 +202,7 @@
 			projectRoot = "";
 			targets = (
 				97A0562F26410BEF006BEE11 /* SiriKit_Payment_Integration */,
+				97A0564D2641D205006BEE11 /* Siri Payment Intents */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +218,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		97A0564C2641D205006BEE11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,13 +232,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A0563826410BEF006BEE11 /* ViewController.swift in Sources */,
+				97A0563826410BEF006BEE11 /* _ViewController.swift in Sources */,
+				97DBBB07264272300070A7FE /* IntentHandler.swift in Sources */,
+				97A0564926410EBA006BEE11 /* BankAccount.swift in Sources */,
 				97A0563426410BEF006BEE11 /* AppDelegate.swift in Sources */,
 				97A0563626410BEF006BEE11 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		97A0564A2641D205006BEE11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97A056542641D205006BEE11 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97A056572641D205006BEE11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97A0564D2641D205006BEE11 /* Siri Payment Intents */;
+			targetProxy = 97A056562641D205006BEE11 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		97A0563926410BEF006BEE11 /* Main.storyboard */ = {
@@ -284,8 +397,10 @@
 		97A0564526410BF0006BEE11 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SiriKit_Payment_Integration/SiriKit_Payment_IntegrationDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FQ52H34MLU;
 				INFOPLIST_FILE = SiriKit_Payment_Integration/Info.plist;
@@ -303,6 +418,7 @@
 		97A0564626410BF0006BEE11 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +430,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.roypark.SiriKit-Payment-Integration";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		97A0565A2641D205006BEE11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FQ52H34MLU;
+				INFOPLIST_FILE = "Siri Payment Intents/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roypark.SiriKit-Payment-Integration.Siri-Payment-Intents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97A0565B2641D205006BEE11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FQ52H34MLU;
+				INFOPLIST_FILE = "Siri Payment Intents/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roypark.SiriKit-Payment-Integration.Siri-Payment-Intents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -336,6 +490,15 @@
 			buildConfigurations = (
 				97A0564526410BF0006BEE11 /* Debug */,
 				97A0564626410BF0006BEE11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97A056592641D205006BEE11 /* Build configuration list for PBXNativeTarget "Siri Payment Intents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97A0565A2641D205006BEE11 /* Debug */,
+				97A0565B2641D205006BEE11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

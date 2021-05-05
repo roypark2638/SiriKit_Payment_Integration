@@ -26,20 +26,21 @@ class BankAccount {
     
 //    private init() {}
     
-    private func checkBalanced() -> Double {
+    func checkBalanced() -> Double {
         return UserDefaults.standard.double(forKey: "balance")
         
     }
     
-    private func setBalance(with amount: Double?) {
+    func setBalance(with amount: Double?) {
         self.balance = amount ?? 0
 //        UserDefaults.standard.set(amount, forKey: "balance")
     }
     
     @discardableResult
-    private func withdraw(of amount: Double) -> Double {
+    func withdraw(of amount: Double) -> Double {
         let newBalance = self.balance - amount
         self.balance = newBalance
+        print("After withdraw, the new balance:\(newBalance)")
         return newBalance
 //        let balance = UserDefaults.standard.double(forKey: "balance")
 //        let newBalance = balance - amount
@@ -48,9 +49,10 @@ class BankAccount {
     }
     
     @discardableResult
-    private func deposit(of amount: Double) -> Double {
+    func deposit(of amount: Double) -> Double {
         let newBalance = self.balance + amount
         self.balance = newBalance
+        print("After deposit, the new balance:\(newBalance)")
         return newBalance
 //        let balance = UserDefaults.standard.double(forKey: "balance")
 //        let newBalance = balance + amount

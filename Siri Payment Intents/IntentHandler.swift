@@ -8,8 +8,8 @@
 import Intents
 
 protocol IntentHandlerDelegate: AnyObject {
-    func intentHandler(_ handler: IntentHandler, sendIntentWith: Double)
-    func intentHandler(_ handler: IntentHandler, requestIntentWith: Double)
+    func intentHandler(_ handler: IntentHandler, sendIntentWith amount: Double)
+    func intentHandler(_ handler: IntentHandler, requestIntentWith amount: Double)
 }
 
 class IntentHandler: INExtension {
@@ -26,8 +26,11 @@ extension IntentHandler: INSendPaymentIntentHandling {
             return
         }
 //        BankAccount.withdraw
-         
+        print("Send amount: \(amount)")
         delegate?.intentHandler(self, sendIntentWith: amount)
+        completion(INSendPaymentIntentResponse(
+                    code: .success,
+                    userActivity: nil))
         
     }
     
@@ -36,6 +39,17 @@ extension IntentHandler: INSendPaymentIntentHandling {
 extension IntentHandler: INRequestPaymentIntentHandling {
     func handle(intent: INRequestPaymentIntent, completion: @escaping (INRequestPaymentIntentResponse) -> Void) {
         
+        guard let amount = intent.currencyAmount?.amount?.doubleValue else {
+            completion(INRequestPaymentIntentResponse(
+                        code: .failure,
+                        userActivity: nil))
+            return
+        }
+        print("Request amount: \(amount)")
+        delegate?.intentHandler(self, requestIntentWith: amount)
+        completion(INRequestPaymentIntentResponse(
+                    code: .success,
+                    userActivity: nil))
     }
     
 }

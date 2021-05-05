@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Intents
 
 class _ViewController: UIViewController {
     
@@ -48,6 +49,12 @@ class _ViewController: UIViewController {
         view.addSubview(balanceLabel)
         view.addSubview(refreshButton)
         
+        refreshButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        
+        INPreferences.requestSiriAuthorization { status in
+
+        }
+        
         configureBalance()
     }
     
@@ -77,18 +84,27 @@ class _ViewController: UIViewController {
         )
     }
     
-    private func configureBalance() {
+    private func configureBalance(with amount: Double = 0) {
         balanceLabel.text = "\(myAccount.firstName) \(myAccount.lastName)'s Balance:\n $\(myAccount.balance)"
+    }
+    
+    @objc private func didTapButton() {
+        print("button tapped")
+        configureBalance()
     }
 }
 
 extension _ViewController: IntentHandlerDelegate {
-    func intentHandler(_ handler: IntentHandler, sendIntentWith: Double) {
-        <#code#>
+    func intentHandler(_ handler: IntentHandler, sendIntentWith amount: Double) {
+        print("delegate called")
+        myAccount.withdraw(of: amount)
+        
+
     }
     
-    func intentHandler(_ handler: IntentHandler, requestIntentWith: Double) {
-        <#code#>
+    func intentHandler(_ handler: IntentHandler, requestIntentWith amount: Double) {
+        print("delegate called")
+        myAccount.deposit(of: amount)
     }
     
     
